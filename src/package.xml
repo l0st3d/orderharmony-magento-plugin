@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>LogOrder</name>
+    <version>1.0.0</version>
+    <stability>devel</stability>
+    <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Writes a message to the log when a transaction has been completed.</summary>
+    <description>Writes a message to the log when a transaction has been completed.</description>
+    <notes>none</notes>
+    <authors><author><name>David</name><user>david</user><email>djlockwood84@gmail.com</email></author></authors>
+    <date>2012-05-07</date>
+    <time>09:36:50</time>
+    <contents><target name="magelocal"><dir name="OrderHarmony"><dir name="LogOrder"><dir name="etc"><file name="config.xml" hash="34e6823af7505681e66b7f08d15ca5a2"/></dir><dir name="Model"><file name="Observer.php" hash="cfe485d74fae9b162b38073792b7f9ce"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="OrderHarmony_LogOrder.xml" hash="e8d5f46c13c695dc7232fe662279ebe1"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.0.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

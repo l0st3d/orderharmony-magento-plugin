@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The root node for Magento module configuration -->
+<config> 
+
+    <!-- The module's node contains basic information about each Magento module -->
+    <modules>
+
+        <!--
+            This must exactly match the namespace and module’s folder names,
+            with directory separators replaced by underscores
+        -->
+        <OrderHarmony_LogOrder>
+
+            <!-- This is the version of our module, starting at 0.0.1 -->
+            <version>0.0.1</version>
+
+        </OrderHarmony_LogOrder>
+
+    </modules>
+
+	  <!-- Configure our module's behavior in the global scope -->
+    <global>
+
+        <!-- Defining models -->
+        <models>
+
+            <!--
+                Unique identifier in the model’s node.
+                By convention, we put the module’s name in lowercase.
+            -->
+            <orderharmony_logorder>
+
+                <!--
+                    The path to our models directory, with directory
+                    separators replaced by underscores
+                -->
+                <class>OrderHarmony_LogOrder_Model</class>
+
+            </orderharmony_logorder>
+
+        </models>
+        
+        <!-- Defining an event observer -->
+        <events>
+
+            <!-- The code of the event we want to observe -->
+            <checkout_onepage_controller_success_action>
+
+                <!-- Defining an observer for this event -->
+                <observers>
+
+                    <!--
+                        Unique identifier in the catalog_product_save_after node.
+                        By convention, we put the module's name in lowercase.
+                    -->
+                    <orderharmony_logorder>
+
+                        <!-- The model to be instantiated -->
+                        <class>orderharmony_logorder/observer</class>
+
+                        <!-- The method of the above model to be called -->
+                        <method>logOrder</method>
+
+                        <!-- We generally use the singleton type for observers -->
+                        <type>singleton</type>
+
+                    </orderharmony_logorder>
+
+                </observers>
+
+            </checkout_onepage_controller_success_action>
+
+        </events>
+
+    </global>
+    
+</config>
