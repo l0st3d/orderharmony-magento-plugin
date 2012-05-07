@@ -1,4 +1,7 @@
-orderharmony-magento-plugin
-===========================
+* OrderHarmony Magento Plugin
 
 An OrderHarmony Magento plugin
+
+** Build instructions
+
+Run ./scripts/package.sh to generate the plugin, and copy into your Magento install.
