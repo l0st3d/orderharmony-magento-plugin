@@ -41,6 +41,12 @@
 
         </models>
         
+        <helpers>
+        	<orderharmony_logorder>
+        		<class>OrderHarmony_LogOrder_Helper</class>
+        	</orderharmony_logorder>
+        </helpers>
+        
         <!-- Defining an event observer -->
         <events>
 
