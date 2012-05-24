@@ -53,11 +53,11 @@ class OrderHarmony_LogOrder_Model_Observer
 		$orderData = '{"order":{"customer":{"name":"'.$_name.'", "email":"'.$_email.'"}, "customer-reference":"'.$_customerId.'", "order-lines":['.$_orderLine.'], "invoice-address":[{"line":"'.$_billingStreet1.'"}, {"line":"'.$_billingStreet2.'"}, {"line":"'.$_billingCity.'"}, {"line":"'.$_billingCounty.'"}, {"postcode":"'.$_billingPostcode.'"}], "delivery-address":[{"line":"'.$_shippingStreet1.'"}, {"line":"'.$_shippingStreet2.'"}, {"line":"'.$_shippingCity.'"}, {"line":"'.$_shippingCounty.'"}, {"postcode":"'.$_shippingPostcode.'"}]}}';
    		
    		//set variables for request to Order Harmony
-   		$host = 'https://david.orderharmony.com';
+   		$host = Mage::getStoreConfig('orderharmony/orderharmony_group/orderharmony_url');
    		$path = '/api/1/orders?';
-		$token = 'qoqqap7cuyfu805it0';
+		$token = Mage::getStoreConfig('orderharmony/orderharmony_group/orderharmony_token');
    		$serial = time();
-   		$secret = '1anr5ufq20338eyvov35a7zf4xqy9kkj0yjjrghpkzrf3e175v';
+   		$secret = Mage::getStoreConfig('orderharmony/orderharmony_group/orderharmony_secret');
    		
 		$signature = $path.'token='.$token.'&serial='.$serial.'&secret='.$secret;
 		$signature = sha1($signature);

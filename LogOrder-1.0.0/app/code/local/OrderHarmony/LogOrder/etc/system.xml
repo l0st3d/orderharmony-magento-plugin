@@ -27,7 +27,7 @@
                     <fields>
                         <orderharmony_url translate="label">
                             <label>URL: </label>
-                            <comment>URL of your Order Harmony page</comment>
+                            <comment>URL of your Order Harmony page, eg. https://david.orderharmony.com</comment>
                             <frontend_type>text</frontend_type>
                             <sort_order>20</sort_order>
                             <show_in_default>1</show_in_default>
